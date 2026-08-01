@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/student.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Student Registration Portal</h1>
+    <p>Student Registration Form</p>
+</header>
+
+<main>
+
+<div class="login-box">
+
+<h2>Register Student</h2>
+
+<form id="registerForm">
+
+<label>Full Name</label>
+<input type="text" id="name" required>
+
+<label>Roll Number</label>
+<input type="text" id="roll" required>
+
+<label>Email</label>
+<input type="email" id="email" required>
+
+<label>Phone Number</label>
+<input type="tel" id="phone" required>
+
+<label>Gender</label>
+
+<select id="gender" required>
+<option value="">Select Gender</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<label>Branch</label>
+
+<select id="branch" required>
+<option value="">Select Branch</option>
+<option>CSE</option>
+<option>ECE</option>
+<option>EEE</option>
+<option>MECH</option>
+<option>CIVIL</option>
+<option>IT</option>
+</select>
+
+<label>Year</label>
+
+<select id="year" required>
+<option value="">Select Year</option>
+<option>1st Year</option>
+<option>2nd Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+</select>
+
+<label>Date of Birth</label>
+<input type="date" id="dob" required>
+
+<label>Address</label>
+<textarea id="address" rows="3" required></textarea>
+
+<label>Upload Photo</label>
+<input type="file" id="photo" accept="image/*">
+
+<label>Password</label>
+<input type="password" id="password" required>
+
+<label>Confirm Password</label>
+<input type="password" id="confirmPassword" required>
+
+<button type="submit">Register</button>
+
+</form>
+
+<p class="register-link">
+Already Registered?
+<a href="student-login.html">Login Here</a>
+</p>
+
+<p class="register-link">
+<a href="index.html">← Back to Home</a>
+</p>
+
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Student Registration Portal</p>
+</footer>
+
+<script src="js/student-register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edit Student</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+
+<header>
+<h1>Student Registration Portal</h1>
+</header>
+
+<div class="admin-container">
+
+<div class="sidebar">
+
+<h2>Admin Panel</h2>
+
+<a href="admin-dashboard.html">🏠 Dashboard</a>
+<a href="students.html">👨‍🎓 Students</a>
+<a href="update-requests.html">📝 Update Requests</a>
+<a href="index.html">🚪 Logout</a>
+
+</div>
+
+<div class="content">
+
+<div class="profile-card">
+
+<h2>Edit Student Details</h2>
+
+<form>
+
+<label>Full Name</label>
+<input type="text" value="Pavani Anjani Kumari">
+
+<label>Roll Number</label>
+<input type="text" value="23CSE001" readonly>
+
+<label>Email</label>
+<input type="email" value="pavani@gmail.com">
+
+<label>Phone Number</label>
+<input type="text" value="9876543210">
+
+<label>Gender</label>
+
+<select>
+<option>Female</option>
+<option>Male</option>
+<option>Other</option>
+</select>
+
+<label>Branch</label>
+
+<select>
+<option>CSE</option>
+<option>ECE</option>
+<option>EEE</option>
+<option>MECH</option>
+<option>CIVIL</option>
+<option>IT</option>
+</select>
+
+<label>Year</label>
+
+<select>
+<option>2nd Year</option>
+<option>1st Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+</select>
+
+<label>Date of Birth</label>
+<input type="date" value="2006-05-10">
+
+<label>Address</label>
+<textarea rows="4">Andhra Pradesh</textarea>
+
+<label>Change Photo</label>
+<input type="file">
+
+<br><br>
+
+<button type="submit">Save Changes</button>
+
+<a href="student-details.html">
+<button type="button">Cancel</button>
+</a>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Student Registration Portal</p>
+
+</footer>
+
+
+<script src="js/edit-student.js"></script>
+
+
+</body>
+
+</html>
