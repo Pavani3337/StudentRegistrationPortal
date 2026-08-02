@@ -7,7 +7,7 @@ form.addEventListener("submit", function (e) {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    let students = JSON.parse(localStorage.getItem("students")) || [];
+    let students = JSON.parse(localStorage.getItem("sr_students")) || [];
 
     const student = students.find(s =>
         (s.email === username || s.roll === username) &&
@@ -16,7 +16,7 @@ form.addEventListener("submit", function (e) {
 
     if (student) {
 
-        localStorage.setItem("loggedInStudent", JSON.stringify(student));
+        localStorage.setItem("sr_loggedInStudent", JSON.stringify(student));
 
         alert("Login Successful");
 

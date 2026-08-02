@@ -1,4 +1,4 @@
-const student = JSON.parse(localStorage.getItem("loggedInStudent"));
+const student = JSON.parse(localStorage.getItem("sr_loggedInStudent"));
 
 if (!student) {
     alert("Please login first.");

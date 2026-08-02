@@ -1,9 +1,9 @@
-if (localStorage.getItem("adminLoggedIn") !== "true") {
+if (localStorage.getItem("sr_adminLoggedIn") !== "true") {
     alert("Please login first.");
     window.location.href = "admin-login.html";
 }
 
-let students = JSON.parse(localStorage.getItem("students")) || [];
+let students = JSON.parse(localStorage.getItem("sr_students")) || [];
 
 const table = document.getElementById("studentTable");
 
@@ -18,7 +18,7 @@ function displayStudents(data){
         <tr>
 
             <td>
-                <img src="images/default-profile.png" class="student-photo">
+                <img src="default-profile.png" class="student-photo">
             </td>
 
             <td>${student.roll}</td>
@@ -67,7 +67,7 @@ document.getElementById("search").addEventListener("keyup",function(){
 
 function viewStudent(index){
 
-    localStorage.setItem("selectedStudent",JSON.stringify(students[index]));
+    localStorage.setItem("sr_selectedStudent",JSON.stringify(students[index]));
 
     window.location.href="student-details.html";
 
@@ -75,7 +75,7 @@ function viewStudent(index){
 
 function editStudent(index){
 
-    localStorage.setItem("selectedStudent",JSON.stringify(students[index]));
+    localStorage.setItem("sr_selectedStudent",JSON.stringify(students[index]));
 
     window.location.href="edit-student.html";
 
@@ -87,7 +87,7 @@ function deleteStudent(index){
 
         students.splice(index,1);
 
-        localStorage.setItem("students",JSON.stringify(students));
+        localStorage.setItem("sr_students",JSON.stringify(students));
 
         displayStudents(students);
 

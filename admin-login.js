@@ -11,7 +11,7 @@ form.addEventListener("submit", function (e) {
 
         alert("Admin Login Successful");
 
-        localStorage.setItem("adminLoggedIn", "true");
+        localStorage.setItem("sr_adminLoggedIn", "true");
 
         window.location.href = "admin-dashboard.html";
 

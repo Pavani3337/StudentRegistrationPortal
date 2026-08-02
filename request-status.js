@@ -1,6 +1,6 @@
-const student = JSON.parse(localStorage.getItem("loggedInStudent"));
+const student = JSON.parse(localStorage.getItem("sr_loggedInStudent"));
 
-let requests = JSON.parse(localStorage.getItem("requests")) || [];
+let requests = JSON.parse(localStorage.getItem("sr_requests")) || [];
 
 const myRequest = requests.find(r => r.roll === student.roll);
 

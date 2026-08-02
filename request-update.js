@@ -6,7 +6,7 @@ form.addEventListener("submit", function (e) {
 
     e.preventDefault();
 
-    const student = JSON.parse(localStorage.getItem("loggedInStudent"));
+    const student = JSON.parse(localStorage.getItem("sr_loggedInStudent"));
 
     const request = {
 
@@ -30,11 +30,11 @@ form.addEventListener("submit", function (e) {
 
     };
 
-    let requests = JSON.parse(localStorage.getItem("requests")) || [];
+    let requests = JSON.parse(localStorage.getItem("sr_requests")) || [];
 
     requests.push(request);
 
-    localStorage.setItem("requests", JSON.stringify(requests));
+    localStorage.setItem("sr_requests", JSON.stringify(requests));
 
     alert("Update Request Submitted Successfully");
 
@@ -44,7 +44,7 @@ form.addEventListener("submit", function (e) {
 
 
 
-const student = JSON.parse(localStorage.getItem("loggedInStudent"));
+const student = JSON.parse(localStorage.getItem("sr_loggedInStudent"));
 
 const field = document.getElementById("field");
 

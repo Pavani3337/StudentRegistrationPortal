@@ -1,10 +1,10 @@
-if (localStorage.getItem("adminLoggedIn") !== "true") {
+if (localStorage.getItem("sr_adminLoggedIn") !== "true") {
     alert("Please login first");
     window.location.href = "admin-login.html";
 }
 
-let requests = JSON.parse(localStorage.getItem("requests")) || [];
-let students = JSON.parse(localStorage.getItem("students")) || [];
+let requests = JSON.parse(localStorage.getItem("sr_requests")) || [];
+let students = JSON.parse(localStorage.getItem("sr_students")) || [];
 
 const table = document.getElementById("requestTable");
 
@@ -89,16 +89,16 @@ function approve(index){
 
     }
 
-    localStorage.setItem("students",JSON.stringify(students));
+    localStorage.setItem("sr_students",JSON.stringify(students));
 
-    const loggedInStudent = JSON.parse(localStorage.getItem("loggedInStudent"));
+    const loggedInStudent = JSON.parse(localStorage.getItem("sr_loggedInStudent"));
 
 if (loggedInStudent && loggedInStudent.roll === student.roll) {
-    localStorage.setItem("loggedInStudent", JSON.stringify(student));
+    localStorage.setItem("sr_loggedInStudent", JSON.stringify(student));
 }
 
 
-    localStorage.setItem("requests",JSON.stringify(requests));
+    localStorage.setItem("sr_requests",JSON.stringify(requests));
 
     alert("Request Approved");
 
@@ -110,7 +110,7 @@ function reject(index){
 
     requests[index].status="Rejected";
 
-    localStorage.setItem("requests",JSON.stringify(requests));
+    localStorage.setItem("sr_requests",JSON.stringify(requests));
 
     alert("Request Rejected");
 

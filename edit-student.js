@@ -1,6 +1,6 @@
-let students = JSON.parse(localStorage.getItem("students")) || [];
+let students = JSON.parse(localStorage.getItem("sr_students")) || [];
 
-let student = JSON.parse(localStorage.getItem("selectedStudent"));
+let student = JSON.parse(localStorage.getItem("sr_selectedStudent"));
 
 if (!student) {
     window.location.href = "students.html";
@@ -37,9 +37,9 @@ document.querySelector("form").addEventListener("submit", function(e){
 
     students[index] = student;
 
-    localStorage.setItem("students", JSON.stringify(students));
+    localStorage.setItem("sr_students", JSON.stringify(students));
 
-    localStorage.setItem("selectedStudent", JSON.stringify(student));
+    localStorage.setItem("sr_selectedStudent", JSON.stringify(student));
 
     alert("Student Updated Successfully");
 

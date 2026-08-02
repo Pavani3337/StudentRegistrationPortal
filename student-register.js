@@ -28,11 +28,11 @@ form.addEventListener("submit", function (e) {
 
     };
 
-    let students = JSON.parse(localStorage.getItem("students")) || [];
+    let students = JSON.parse(localStorage.getItem("sr_students")) || [];
 
     students.push(student);
 
-    localStorage.setItem("students", JSON.stringify(students));
+    localStorage.setItem("sr_students", JSON.stringify(students));
 
     alert("Registration Successful");
 

@@ -1,4 +1,4 @@
-if (localStorage.getItem("adminLoggedIn") !== "true") {
+if (localStorage.getItem("sr_adminLoggedIn") !== "true") {
 
     alert("Please login first.");
 
@@ -6,9 +6,9 @@ if (localStorage.getItem("adminLoggedIn") !== "true") {
 
 }
 
-const students = JSON.parse(localStorage.getItem("students")) || [];
+const students = JSON.parse(localStorage.getItem("sr_students")) || [];
 
-const requests = JSON.parse(localStorage.getItem("requests")) || [];
+const requests = JSON.parse(localStorage.getItem("sr_requests")) || [];
 
 const pending = requests.filter(r => r.status === "Pending").length;
 const approved = requests.filter(r => r.status === "Approved").length;

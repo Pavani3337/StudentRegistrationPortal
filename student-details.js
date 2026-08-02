@@ -1,4 +1,4 @@
-const student = JSON.parse(localStorage.getItem("selectedStudent"));
+const student = JSON.parse(localStorage.getItem("sr_selectedStudent"));
 
 if (!student) {
     window.location.href = "students.html";
