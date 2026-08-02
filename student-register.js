@@ -1,31 +1,23 @@
-const form = document.getElementById("registerForm");
+const photoInput = document.getElementById("photo");
 
-form.addEventListener("submit", function (e) {
+const reader = new FileReader();
 
-    e.preventDefault();
+reader.onload = function () {
 
     const student = {
 
         name: document.getElementById("name").value,
-
         roll: document.getElementById("roll").value,
-
         email: document.getElementById("email").value,
-
         phone: document.getElementById("phone").value,
-
         gender: document.getElementById("gender").value,
-
         branch: document.getElementById("branch").value,
-
         year: document.getElementById("year").value,
-
         dob: document.getElementById("dob").value,
-
         address: document.getElementById("address").value,
+        password: document.getElementById("password").value,
 
-        password: document.getElementById("password").value
-
+        photo: reader.result
     };
 
     let students = JSON.parse(localStorage.getItem("sr_students")) || [];
@@ -37,5 +29,6 @@ form.addEventListener("submit", function (e) {
     alert("Registration Successful");
 
     window.location.href = "student-login.html";
+};
 
-});
+reader.readAsDataURL(photoInput.files[0]);
