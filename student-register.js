@@ -1,23 +1,31 @@
-const photoInput = document.getElementById("photo");
+const form = document.getElementById("registerForm");
 
-const reader = new FileReader();
+form.addEventListener("submit", function (e) {
 
-reader.onload = function () {
+    e.preventDefault();
 
     const student = {
 
         name: document.getElementById("name").value,
-        roll: document.getElementById("roll").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        gender: document.getElementById("gender").value,
-        branch: document.getElementById("branch").value,
-        year: document.getElementById("year").value,
-        dob: document.getElementById("dob").value,
-        address: document.getElementById("address").value,
-        password: document.getElementById("password").value,
 
-        photo: reader.result
+        roll: document.getElementById("roll").value,
+
+        email: document.getElementById("email").value,
+
+        phone: document.getElementById("phone").value,
+
+        gender: document.getElementById("gender").value,
+
+        branch: document.getElementById("branch").value,
+
+        year: document.getElementById("year").value,
+
+        dob: document.getElementById("dob").value,
+
+        address: document.getElementById("address").value,
+
+        password: document.getElementById("password").value
+
     };
 
     let students = JSON.parse(localStorage.getItem("sr_students")) || [];
@@ -29,6 +37,5 @@ reader.onload = function () {
     alert("Registration Successful");
 
     window.location.href = "student-login.html";
-};
 
-reader.readAsDataURL(photoInput.files[0]);
+});
