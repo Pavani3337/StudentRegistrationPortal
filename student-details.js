@@ -4,6 +4,11 @@ if (!student) {
     window.location.href = "students.html";
 }
 
+
+
+ <img src="${student.photo}" class="student-photo">
+
+
 document.querySelector("h2").textContent = student.name;
 
 document.getElementById("profilePhoto").src = student.photo;
