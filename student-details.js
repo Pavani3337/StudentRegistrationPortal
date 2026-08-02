@@ -6,6 +6,8 @@ if (!student) {
 
 document.querySelector("h2").textContent = student.name;
 
+document.getElementById("profilePhoto").src = student.photo;
+
 const rows = document.querySelectorAll("table tr");
 
 rows[0].children[1].textContent = student.roll;

@@ -4,38 +4,52 @@ form.addEventListener("submit", function (e) {
 
     e.preventDefault();
 
-    const student = {
+    if(document.getElementById("password").value !==
+       document.getElementById("confirmPassword").value){
 
-        name: document.getElementById("name").value,
+        alert("Passwords do not match");
+        return;
+    }
 
-        roll: document.getElementById("roll").value,
+    const file = document.getElementById("photo").files[0];
 
-        email: document.getElementById("email").value,
+    const reader = new FileReader();
 
-        phone: document.getElementById("phone").value,
+    reader.onload = function(){
 
-        gender: document.getElementById("gender").value,
+        const student = {
 
-        branch: document.getElementById("branch").value,
+            name: document.getElementById("name").value,
+            roll: document.getElementById("roll").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            gender: document.getElementById("gender").value,
+            branch: document.getElementById("branch").value,
+            year: document.getElementById("year").value,
+            dob: document.getElementById("dob").value,
+            address: document.getElementById("address").value,
+            password: document.getElementById("password").value,
 
-        year: document.getElementById("year").value,
+            photo: reader.result
+        };
 
-        dob: document.getElementById("dob").value,
+        let students = JSON.parse(localStorage.getItem("sr_students")) || [];
 
-        address: document.getElementById("address").value,
+        students.push(student);
 
-        password: document.getElementById("password").value
+        localStorage.setItem("sr_students", JSON.stringify(students));
+
+        alert("Registration Successful");
+
+        window.location.href="student-login.html";
 
     };
 
-    let students = JSON.parse(localStorage.getItem("sr_students")) || [];
-
-    students.push(student);
-
-    localStorage.setItem("sr_students", JSON.stringify(students));
-
-    alert("Registration Successful");
-
-    window.location.href = "student-login.html";
+    if(file){
+        reader.readAsDataURL(file);
+    }
+    else{
+        alert("Please upload a photo");
+    }
 
 });

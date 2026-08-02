@@ -18,7 +18,7 @@ function displayStudents(data){
         <tr>
 
             <td>
-                <img src="default-profile.png" class="student-photo">
+                <img src="${student.photo}" class="student-photo">
             </td>
 
             <td>${student.roll}</td>
